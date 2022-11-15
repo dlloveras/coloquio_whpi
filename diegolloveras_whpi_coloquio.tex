@@ -129,6 +129,251 @@
 \item Conclusiones generales.
 \end{itemize}
 }
+%----------------------------------------
+
+\frame{
+\titulo{Rotaciones analizadas}
+\footnotesize
+\vspace{-0.8cm}
+%\begin{columns}
+%\column{0.2\textwidth}
+%\centering
+%\vspace{-4cm}
+
+%\column{0.8\textwidth}
+\begin{center}
+\includegraphics[width=0.99\textwidth,height=0.75\textwidth]{figuras/ciclos_ssn_recorte3.pdf}
+\end{center}
+%\end{columns}
+}
+
+%----------------> TOMOGRAFIA <------------------------------------------------------
+\frame{
+\titulo{Tomography}
+\footnotesize
+\vskip 0.1cm
+{\bf Unknown:} \rojo{3D distribution of a certain quantity $\bx_i$} (e.g. $\Ne$) for each cell volume $i$ within an object (e.g. the solar corona), under optically thin regime (e.g. WL)\\
+\vskip 0.1cm
+{\bf Knowns:} 
+\begin{itemize} 
+\item[\bu] \azul{Intensity vector $\by_j$:} measurement in each \azul{pixel $j$} of each image of a time-series providing different view angles.\\
+\item[\bu] \azul{\emph{Proyection} matrix $\bA_{ji}$:} depending on the \azul{geometry} (e.g. solar rotation, telescope orbit) and the involved \azul{physical process} (e.g. Thomson scattering).
+\begin{center}
+%\figu{\includegraphics[width=0.7\linewidth]{tom_sketch.eps}}
+{\includegraphics[width=0.55\linewidth]{figuras/tom_sketch.eps}}
+\end{center}
+\end{itemize}
+}
+
+%----------------------------------------------------------------------
+\frame{
+\titulo{SRT Computational Grid}
+\vspace{-0.5cm}
+\footnotesize
+\begin{center}
+%\figu{\includegraphics[width=0.25\textwidth,angle=90]{Grid.png}}
+\includegraphics[width=0.25\textwidth,angle=90]{figuras/Grid.png}
+\\
+Sun-centered spherical grid
+\end{center}
+%\salto
+\begin{columns}
+\column{0.5\textwidth}
+\centerline{\bf \underline{WL-SRT}}
+\vskip 0.25cm
+\begin{center}
+FoV $\sim 2.5-8.5\,\Rs$\\ 
+Cell $\sim 0.1\,\Rs \times 3\mdeg \times 3\mdeg$\\
+\azul{\# Cells} $\azul{I}\,=\,60\times60\times120\sim\ \azul{4\times10^5}$\\
+\azul{\# Pixels} $\azul{J}\,=\,512^2\times14\sim\ \azul{4\times10^6}$
+\end{center}
+\column{0.5\textwidth}
+\centerline{\bf \underline{EUV-SRT}}
+\vskip 0.25cm
+\begin{center}
+FoV $\sim 1-1.3\,\Rs$\\ 
+Cell $\sim 0.01\,\Rs \times 2\mdeg \times 2\mdeg$\\
+\azul{\# Cells} $\azul{I}\,=\,30\times90\times180\sim\ \azul{5\times10^5}$\\
+\azul{\# Pixels} $\azul{J}\,=\,512^2\times14\times4\sim\ \azul{2\times10^7}$
+\end{center}
+\end{columns}
+}
+
+
+\frame{
+\titulo{The SRT Problem}
+\footnotesize
+
+\begin{center}
+The signal recorded by the $j$-th pixel of the $k$-th band is given by:
+\vskip 0.1cm
+%\figu{
+$\azul{I_{k,j}} \ = \ \azul{ \int_{\textsf{LOS}_j} \ \textsf{d}l} \  
+\azul{w({\bf r}_j(l))} \ \rojo{x(\azul{{\bf r}_j(l)})} 
+\ \ \rightarrow \ \
+\azul{\boldsymbol{I_k}} = \azul{\boldsymbol{A_k}\,\cdotp\,} \rojo{{\boldsymbol{X_k}}} $
+
+%$\azul{Y_{k,j}} \ \ = \ \ \azul{ \int_{\mathrm{LDV}} \mathrm{d}l} \  
+%\azul{A({\bf r}_j(l))} \, \rojo{X \left(k,\azul{{\bf r}_j(l)}\right)} 
+
+%}
+\end{center}
+\hskip 1.45cm
+\azul{\ $\mathbf{I}$}: Vector of $\azul{J}$ elements $\azul{I_{j}}$, all pixels in all images.\\
+\hskip 1.5cm
+\azul{\,$\mathbf{A}$}: Large sparse matrix of $\azul{J\times I}$ elements, purelly geometrical.\\
+\hskip 1.5cm
+\rojo{\,$\rojo{\mathbf{X}}$}: Vector of $\azul{I}$ elements, the discrete 3D distribution of the unknown:\\
+\begin{center}
+\begin{columns}
+\column{0.4\textwidth}
+\centerline{\bf \underline{WL-SRT}}
+\vspace{-.5cm}
+\begin{eqnarray*}
+\rojo{x \left(\azul{{\bf r}}\right)} &=& 
+\rojo{\Ne\left(\azul{{\bf r}}\right)}\\
+\azul{w({\bf r})} &=& \azul{S_{\textsf{Thomson}}({\bf r})}
+\end{eqnarray*}
+\ \\
+\column{0.6\textwidth}
+\centerline{\bf \underline{EUV-SRT}}
+\vspace{-.5cm}
+\begin{eqnarray*}
+\rojo{x \left(\azul{{\bf r}_j(l)}\right)} &=&
+\rojo{E_k\left(\azul{{\bf r}_j(l)}\right)} \equiv \int_{0}^{\infty} \mathrm{d} \lambda \ \phi_k(\lambda)\ \eta (\mathbf{r}, \lambda)
+\\
+\azul{w({\bf r}_j(l))} &=& \azul{1}
+\end{eqnarray*}
+\end{columns} 
+\vskip 0.5cm
+Solution: global optimization problem with cost function (of dimension-$I$):
+\vskip 0.1cm
+%\figu{
+$
+f(\rojo{\boldsymbol{X_k}})
+\ = \ 
+\| \azul{\boldsymbol{I_k}} - \azul{\boldsymbol{A_k}}\cdotp\rojo{\boldsymbol{X_k}} \|^2
+\ + \ 
+p\ \|  \azul{\bR}\cdotp\rojo{\boldsymbol{X_k}}   \|^2
+$
+%}
+\\
+\underline{1st term:} Difference between data and synthetic images.\\
+\underline{2nd term:} Regularization of the solution.
+\end{center}
+}
+
+%-------------------> FBE + mamuschkas
+
+\frame{ 
+\titulo{SRT-EUV Output: 3D Filter Band Emisivity}
+\vspace{-0.35cm}
+\begin{columns}
+\noindent
+\column{0.075\textwidth}
+\vskip 0.8cm
+{\footnotesize
+\ 171 \AA
+\vskip 1.75cm
+\ 195 \AA
+\vskip 1.65cm
+\ 284 \AA
+}
+\column{\textwidth}
+\begin{center}
+{\footnotesize
+\ \ Data Image \hfill $\rightarrow$ \hfill 3D FBE \hfill $\rightarrow$ \hfill Synthetic Image\ \ \ \
+}\\
+\framebox{\includegraphics[width=0.95\linewidth]{figuras/frame_050_test.pdf}}\\
+\footnotesize
+ 1.035 $\mrsun$ \hskip 1cm 1.085 $\mrsun$ \hskip 1cm 1.135 $\mrsun$ \hfil
+\end{center}
+\end{columns}
+\begin{columns}
+ \column{0.4\textwidth}
+ Vásquez et al. (2009)
+ \column{0.6\textwidth}
+\end{columns}
+}
+%----------------------------------- LDEM
+
+\frame{
+\titulo{The Local Differential Emission Measure (LDEM)}
+\footnotesize
+\begin{itemize}
+\item[\bu]
+For each band \azul{$k$} we know now the FBE {$\azul{E_{k,i}}$} at each tomographic cell \azul{$i$}.
+\salto
+\item[\bu]
+Using the temperature responses $\azul{Q_k(T)} \equiv \int {\rm d} \lambda \ \phi_k(\lambda) \ {\eta( N_{e0}, {\bf a}_0,
+T; \lambda)}  /  {N_{e0}^2}$
+\salto
+\item[\bu]
+The FBEs can be re-written as:
+$\azul{FBE_{k,i} } \, = \, \azul{\int \mathrm{d}T \  Q_k(T) \ \, \rojo{{\sf LDEM}_i(T)} }$.
+\salto
+\item[\bu]
+%Donde la \rojo{${\sf LDEM}_i(T)$ [cm$^{-6}$K$^{-1}$]} para cada celda \azul{$i$} se define tal que:
+The \rojo{${\sf LDEM}_i(T)$ [cm$^{-6}$K$^{-1}$]} of each cell \azul{$i$} is defined so that:
+\begin{eqnarray}
+N_{m,i}^2 = \left< N_e^2\right>_i &=& \int \mathrm{d} T \ \, \rojo{{\sf LDEM}_i(T)}\nonumber\\
+T_{m,i} = \left<T_e\right>_i  &=& \frac{1}{\left< N_e^2\right>_i } \int \mathrm{d}T\ T \ \, \rojo{{\sf LDEM}_i(T)}\nonumber \\
+ W_{T,i}^2 &=&  \frac{1}{\left< N_e^2\right>_i} \int_{T_{min}}^{T_{max}} dT\ \rojo{{\sf LDEM}_i(T)}\ (T - \langle T_e \rangle_i)^2 \nonumber
+\end{eqnarray}
+%\salto
+\item[\bu] Parametric model for the LDEM:\ 
+$\rojo{{\sf LDEM}_i(T)}=\azul{\mathcal{N}(}T,\,\rojo{\mathbf{\lambda}_i=[A,T_0,\sigma_T]}\azul{)}$ 
+\salto
+\item[\bu]
+The following objective function is minimized in each cell: \mediosalto
+\hskip 3cm
+$
+\Phi(\rojo{{\mathbf{\lambda}}_i}) \ = \ 
+\ \azul{\sum_{k}}| \ \azul{ FBE_{k,i} }-
+\azul{\int \mathrm{d}T \ \, Q_k(T)\ \, \mathcal{N}(T,}\,\rojo{\mathbf{\lambda}_i}\azul{)} \ 
+|^2 
+$.
+\item[\bu] Grado de éxito 
+$
+R_i \equiv (1/K) \sum_{k} | 1 - { FBE_{k,i} } / {\int \mathrm{d}T \ \, Q_k(T)\ \, \mathcal{N}(T,}\,{\mathbf{\lambda}_i}{)} |
+$
+\end{itemize}
+}
+
+
+%--------------------------
+\frame{
+\titulo{LDEM características}
+
+\begin{columns}
+\column{0.5\textwidth}
+%Lloveras et al. (2022)
+\begin{center}
+\includegraphics[height=0.6\textwidth]{figuras/Grid_LDEM.png}
+\end{center}
+\column{0.5\textwidth}
+\includegraphics[width=0.9\textwidth,clip=]{figuras/R_1025_CR2081.pdf}
+%\hfill Lloveras et al. (2022)\\
+%\vskip 2cm
+$R \sim 1\% \, (Streamer) \, y \sim 10\% \, (CHs)$
+%\hfill Lloveras et al. (2022)\\
+\end{columns}
+
+
+\begin{center}
+\includegraphics[width=0.495\textwidth,clip=]{figuras/Nueva_figura_paper_LDEM_2.eps}
+\includegraphics[width=0.495\textwidth,clip=]{figuras/Nueva_figura_paper_3.eps}
+\end{center}
+
+}
+
+
+
+
+
+
+
+
 \begin{comment}
 %-------------------> 
 \frame{
