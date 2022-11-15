@@ -1,0 +1,257 @@
+
+Discurso Defensa Tesis
+
+1 -
+Buen día a todos, muchas gracias por asistir, gracias Mariano por la introducción.
+En esta charla voy a sintetizar parte del trabajo realizado a lo largo de mi tesis doctoral que realice en el grupo de física solar del IAFE bajo la dirección de Alberto Vasquez.
+
+El trabajo de esta tesis se centra en la caracterización observacional de la estructura termodinámica tridimensional (3D) de la corona solar a escala global durante los últimos tres mı́nimos de actividad solar utilizando principalmente reconstrucciones tomográficas. Implementamos simulaciones magnetohidrodinámicas 3D de la corona y del viento solar, lo que permite analizar los resultados tomográficos a lo largo de diferentes estructuras magnéticas coronales. Y además realizamos un análisis comparativo para validar las simulaciones con las reconstrucciones.
+
+A lo largo de esta tesis trabajé en colaboración con Alberto, fede, cecilia maccormack y con nuestro colaboradores de la univ de michigan: ward manchester, richard frazin, bart van der holst, nishtha sachdeva y con phillipe lamy del Lab astronomico de Marsella.
+
+2-
+La estructura de la charla difiere un poco de la organización del manuscrito y luce de la siguiente manera:
+
+Primero, a modo introductorio, definiremos nuestro objeto de estudio que es la corona solar, veremos que esta no es estática y que en realidad tiene un cíclo y hablaremos de la emisión en EUV y la irradiancia en LB que es la forma que utilizaremos para obtener información de la corona.
+
+Luego introduciremos los instrumentos y la metodología que usamos para obtener reconstrucciones de Ne y Te de nuestro objeto de estudio, llamada tomografia solar rotacional que con algunas diferencias se puede aplicar a imagenes EUV y LB.
+Incorporaremos un modelo magnético que nos permitirá trazar los resultados de la reconstruccion a lo largo de distintas estructuras magnéticas.
+
+
+Habiendo introducido todos estos elementos, mencionaremos algunos resultados que hemos obtenido a lo largo de estos años. 
+Primero haremos una comparación de las reconstrucciones EUV a lo largo de los últimos 3 mínimos de actividad solar. 
+
+Luego introduciremos un modelo MHD 3D y lo compararemos con las resconstrucciones obtenidas con tomografia EUV y LB.
+
+Introduciremos el modelado del viento solar y la correlación de sus propiedades terminales con las reconstrucciones basales de DEMT.
+
+Finalizaremos con conclusiones generales y trabajo futuro.
+
+3- A modo de contexto
+
+El estudio observacional y modelado de la atmósfera solar resultan de gran relevancia para la comprensión de la relación Sol-Tierra, siendo esta la región donde el plasma se calienta, el viento solar es acelerado y tienen lugar eventos impulsivos como las erupciones solares y eyecciones coronales de masa. 
+
+Nos encontramos en una era espacial. De esta forma hay un interés obvio en poder entender y predecir las condiciones meteorológicas espaciales y sus efectos geomagnéticos. Esto requiere modelos magnetohidrodinámicos tridimensionales de la atmósfera solar que simulen desde la cromosfera, pasando por la corona y hasta la heliosfera. Estos modelos requieren mejoras constantes y que sus simulaciones sean contrastadas con observaciones.
+
+En en este contexto que se llevaron a cabo los trabajos de la tesis.
+
+4- Interior solar:
+
+El modelo de la estructura del interior solar se divide principalmente en tres regiones: el núcleo, donde la alta presión y temperaturas desencadenan reacciones termonucleares fusionando núcleos de Hidrógeno en Helio que originan la energía solar. La energía producida en el núcleo viaja eficientemente en forma de radiación electromagnética hacia el exterior a través de una zona denominada zona radiativa. En torno a 3/4 de radio solar el transporte radiativo se torna ineficiente, dando lugar al transporte de energía por medio de movimiento macroscópico turbulento del material caliente. A esta región se la denomina zona convectiva.
+
+Por encima de la región convectiva se encuentra la atmósfera solar compuesta por cuatro regiones: fotosfera, cromosfera, región de transición (RT) y corona.
+
+La mayor parte de la energía solar que se recibe en la Tierra proviene de la fotosfera. Esta región consta de una delgada capa de plasma que dista del centro del Sol en 1 \rsun. En esta región los fotones logran escapar libremente del Sol, por lo que es la zona que percibimos a simple vista como la superficie del Sol. 
+
+Destaca la RT, donde a lo largo de 100 km, la temperatura aumenta 3 ordenes de magnitud y la densidad decae otros 3. Finalmente nos encontramos con la corona solar, que se extiende hasta el medio interplanetario y en su zona mas interna se caracteriza por temperaturas de 1MK y densidaddes de 10^8. 
+
+Dado que no existe una fuente plausible de energía más allá de la corona que pueda calentarla, debemos suponer que alguna forma de energía se suministra desde debajo de la corona para alcanzar su temperatura de un millón de grados. Esto es conocido como el problema del calentamiento coronal, un tema abierto en la actualidad.
+
+Veremos que una forma de abordar el problema de calentamiento es mediante disipacion por turbulencia de ondas de alfven, hablaremos de esto mas adelante.
+
+
+5- Ciclo de actividad solar
+
+EL Sol y la corona no son estaticos. La presentación del concepto de ciclo solar está limitada a una descripción fenomenológica que puede ser explicada mediante el modelo de Babcock.
+
+En un mínimo de actividad las líneas de campo tienen pinta de un dipolo y solo emergen a la superficie en la zona polar. Debido a la rotación angular (que es maxima en el ecuador), las lineas de campo que eran originalmente poloidales se vuelven toroidales. Debido a la rotación diferencial se agrupan y el campo se intensifica. La presion magnética aumenta y las líneas de campo emergen a la superficie como arcos coronal que generan pares de manchas solares en la fotosfera. 
+
+De esta forma la cantidad de manchas solares son una consecuencia del nivel de actividad y se suele utilar este numero como indicador del nivel de actividad.
+
+Si bien el ciclo del campo no es un fenomeno coronal estrictamente hablando, tiene un impacto directo en la corona.
+
+En este grafico se muestra un conteo de manchas solares durante los ultimos 3 ciclos de actividad. Donde podemos ver que el nivel de actividad ha mostrado un sistemático descenso a lo largo del tiempo. Surge la incógnita de si la estructura termodinámica de la corona tiene alguna relación con el nivel de actividad del SC que lo precede. Esta fue la motivación inicial para la propuesta de tesis que finalmente llevo a realizar una caracterización observacional de la estructura termodinámica coronal durante los últimos tres mı́nimos de actividad solar.
+
+Hagamos zoom en estos 3 cuadraditos rojos que representan los minimos profundos.
+
+
+6- Rotaciones analizadas
+En esta charla vamos a analizar 1 rotacion para cada minimo (en la tesis hay algunas rotaciones mas). Estas rotaciones corresponden a los mínimos absolutos, es decir un conteo de manchas solares <1. De esta forma seleccionamos las rotacines CR-1915, CR-2082 y CR-2223 que tuvieron lugar en el 1996, 2009 y 2019.
+Se observo la corona solar con las 3 generaciones de instrumentos EUV que existen, eit, euvi, y aia.
+
+%La observación del Sol virtualmente ininterrumpida por los tres instrumentos aporta una base de datos muy valiosa.
+
+Podemos ver que el mínimo del SC 22/23 fue mas breve activo e intermitente que los ciclos posteriores, que parecieran ser similares. Sin embargo en su nivel global muestran un decrecimiento.
+
+
+
+7- Radiacion coronal
+La forma de obtener información de la corona solar es mediante la radiación proveniente de la misma que es causada por diversos fenómenos físicos, nos interesa la corona K y E.
+
+La corona-K es observable mediante coronógrafos (telescopios que bloquean el disco solar), consiste en luz polarizada que resulta del scattering Thomson de la luz fotosférica por parte de los electrones libres del plasma coronal y se observa en el rango de luz blanca. La polarización de la corona-K varía según la ubicación coronal de los electrones así como también de la posición del observador.
+
+
+La corona-E se da debido a decaimientos electronicos en iones del plasma, es decir que es autentica emision coronal. 
+
+
+La intensidad total de la corona-E, integrada en todo su rango espectral, es muy débil. Sin embargo, la misma está concentrada en líneas aisladas espectralmente en el rango de extremo ultravioleta (EUV), lo cual hace que ésta sea visible utilizando filtros angostos centrados en las líneas de interés.
+
+
+Definir streamer (que significa chorros) y son la proyeccion de la estructura 3D que en la tesis se la llamó cinturon de streamer.
+Definir CH
+Con los videos debe quedar en claro que en un minimo el sol es mucho mas sencillo de estudiar.
+
+
+
+8- Temperaturas caracterı́sticas de la corona solar
+
+Cada instrumento que observa en EUV posee un conjunto de pasabandas unicos definidos como PHI. Podemos calcular la emisividad del plasma considerando el modelo de emision CHIANTI y de esta forma calcular la respuesta térmica que, para cada instrumento luce así. Es decir que cada filtro corresponde a plasma que emite en distintas temperaturas.
+
+A modo de ejemplo acá muestro imagenes tomadas con distintos filtros de AIA conde pueden verse distintas estructuras.
+
+
+9- Tomografia in a nutshell
+Ahora sí, vamos a introducir la metodologia estrella de esta tesis, que es la tomografía. El objetivo de la tomografia es obtener informacion 3D de una determinada cantidad X de un objeto de estudio utilizando como dato imagenes (2D). que dividimos en celdas. Para esto se toman mediciones del mismo objeto desde diferentes puntos de vista.
+
+Entonces el problema lo podemos sintetizar de la siguiente manera
+
+En nuestro caso, el objeto de estudio es el Sol y los distintos angulos son provistos por la rotacion solar.
+
+
+10- Tomografia solar rotacional
+
+En la SRT buscamos resolver la siquiente ecuacion
+
+11- Resultado FBEs
+
+12- Momentos de la LDEM
+
+13- LDEM caracteristicas.
+
+La LDEM es una medida de la distribución de temperatura a traves de un gran numero de tubos de flujo magnético asilados termicamente que atraviesan una celda tomográfica individual.
+
+14 - Reconstruccion DEMT.
+
+Las reconstrucciones tomograficas son objetos 3D y una forma de visualizarlos es mediante mapas latitud-longitud de un corte a una altura especifica. Aca les muestro a modo de ejemplo mapas latitud-longitud, a una altura media, con las reconstrucciones de densidad y temperatura correspondientes a las 3 rotaciones.
+
+
+Motivados por querer analizar la  termodinamica en distintas estructuras megneticas debemos introducir el campo magnético.
+
+
+15- PFSS
+
+El campo magnetico, si bien es fundamental para entender la dinamica coronal, no puede ser medido en la corona con la tecnologia actual. Lo que se hace es usar magnetogramas que son mediciones de la componente radial del campo a nivel fotosferico que se obtienen midiendo el desdoblamiento de las lineas zeeman.
+
+
+Mencionar las estructuras magnéticas
+
+Las estructuras coronales estan fuertemente condicionadas por el campo magnético, y los fenomenos de transporte estan condicionados a lo largo de las lineas de campo. Por lo tanto resulta de interees caracterizar el estado termodinamicos global de la corona a lo largo de las distintas estructuras.
+
+16- Trazado
+Para esto necestiamos combinar la tomografia con el modelo magnetico.
+
+
+A fin de estudiar estadisticamente las cantidades termodinamicas reconstruidas a lo largo de las estructuras magneticas, se ajustan los perfiles de densidad y temperatura con funciones lineales y exponenciales. Esto permite sintetizar los resultados con los valores de los parametros del ajuste.
+
+
+17- Criterio de seleccion
+
+18- Regiones coronales}
+
+Clasificamos las lineas magnéticas en 4 tipos, según la geometría (si son abiertas o cerradas), tamaño (grandes y chcias) y si el gradiente de temperatura es positivo o negativo (up y down).
+
+Para todas las rotaciones analizadas en este trabajo. Las líneas Tipo 0 (estructuras cerradas chicas down) pueblan el nucleo del streamer.
+
+
+19- Comparacion estadistica por regiones
+
+20- Barras de Error
+
+21- Conclusion DEMT
+
+22- SWMF
+
+Al principio de la charla mencioné que la comunidad científica tiene como objetivo predecir la meteorologia espacial. En este contexto encontramos el SWMF, que es un modelo capaz de simular el sistema Sol-Heliosfera-Medio interplanetario. Este modelo fue desarrollado en la univ. de Michigan y se encuentra en cosntante evolucion. Debido al vasto rango de ordenes de magnitud de escalas espacio-temporales que caracterizan las distintas regiones de la atmosfera solar extendida, se emplea una organizacion modular.
+
+En particular nos interesa AWSoM que es el modulo encargado de simular la corona solar y el heliosfera interna.
+
+23- AWSoM
+
+El módulo AWSoM es un modelo MHD 3D global de la corona  que utiliza como único dato la condicion de contorno magnetogramas sinópticos de ADAPT-GONG y esta descripto por la sig ecuaciones.
+El modelo considera de forma auto consistente el calentamiento coronal al incluir la interaccion no lineal de las ondas de alfven que dan como resultado una cascada turbulenta, disipandose y entregando energía al sistema.
+
+
+Hablar de ondas de Alfven: que son? de donde sale la cuenta
+
+A medida que el modelo es mejorado, necesita ser validado con observaciones. Y es acá donde entra la tomografá como herramiento de validación. 
+
+24- Mapas lat long de  Tom vs AWSoM.
+
+Una inspeccion visual revela estructuras simuladas similares a las tomograficas
+
+
+
+25- Tom vs. AWSoM
+Estudiamos la capacidad del modelo MHD-3D para reproducir las reconstrucciones tomográficas en estructuras magnéticas coronales abiertas.
+Validacion
+
+
+
+
+
+26- Comparacion
+
+Entonces realicemos una comparacion estadistica por regiones (como hicimos antes) y veamos que tan bien el modelo le pega las reconstrucciones.
+
+Distribucion estadistica
+
+Mencionar que eliminamos las regiones de densidad alta de DEMT (Hemisferio sur) donde el campo magnético MHD indica lineas abiertas.
+
+27- conclusion
+
+Ajustes promedio que nos dan una buena idea de como luce la comparacion en funcion de la altura. Teneamos en lineas solida los perfiles de DEMT y en linea rayadas los de AWSoM.
+
+Quiero hacer un comentario s con respecto a las los loops down
+
+28- Tomo LB vs AWSoM
+
+Llevamos a cabo una reconstruccion tomografica utilizando imagenes de Lasco-C2. Esto nos permite reonstruir la corona en una region mas alta donde el viento solar ya se encuentra acelerado. Vamos a hablar del viento solar en las prox diapositivas, pero es importante hacer esta mencion acá, ya que es lo que nos motivó a realizar una validación de la simulación del modelo en este rango de alturas.
+
+Como vimos anteriormente, el calculo de las imagenes sinteticas es un buen elemento de validacion y nuevamente revela ciertas diferencias. Pero nuevamente destaca la excelente comparacion entre las imag sinteticas tomograficas contra las imag dato. Y en particular podemos ver mas intesidad en las imag sinteticas de awsom. No obstante en general las estructuras son bien simuladas.
+
+29- 
+Trazamos los resultados a lo largo de las líneas magnéticas.
+Para hacer un análisis comparativo por regiones ajustamos la densidad con una ley de potencias simple.
+
+Así como antes con DEMT caracterizamos con un ajuste HI, acá el régimen es diferente y el ajuste previo no es adecuado. Un ajuste mucho mas adecuado es utilizar una ley de potencia simple, lo cual tiene esta escala de altura asociada.
+
+Seleccionamos las lineas abiertas y separamos el analisis en cada hemisferio. Aca les muestro la distrivucion estadistica de los parametros del ajuste para cada region donde vemos diferencias importantes en las densidades basales.
+
+
+30- 
+La ley de potencia promedio y en funcion de la altura para cada hemisferio luce así
+
+
+
+
+32-
+El plasma en las líneas abiertas se acelera y fluye a través de ellas hasta alcanzar velocidades terminales. El plasma asociado a las líneas con latitudes basales más polares alcanza velocidades del orden de los 750 km/s. Se denomina viento solar rápido y se caracteriza por su régimen uniforme, alta velocidad y baja densidad.
+
+A medida que nos acercamos al plano ecuatorial, encontramos un viento solar lento que se caracteriza por un régimen no uniforme de baja velocidad y alta densidad, que se asocia a las líneas con latitudes basales más cercanas a los bordes del streamer.
+
+Los mecanismos que generan el viento solar lento son un tema abierto, por ejemplo en este trabajo de Suess se propusieron algunas posibilidades. Una de ellas está asociada a las inestabilidades hidrodinámicas, a la liberación de plasma en la parte superior del streamer y a los flujos continuos en la zona entre el streamer y las líneas abiertas.
+
+La idea aquí es relacionar, para cada una de estas líneas abiertas, la velocidad terminal dada por un modelo MHD con la densidad basal dada por la técnica tomográfica.
+
+33- 
+Teniendo en cuenta que 
+
+Dependencia latitu
+
+
+
+
+
+
+
+
+--------------------------------
+Conclusiones del resumen ? 
+
+La estructura coronal de mı́nimo exhibe caracterı́sticas globales persistentes independientemente del nivel de actividad del CS precedente. Entre ellas se destacan la estructura 3D de densidad y temperatura, el grado de contraste en densidad y temperatura entre Streamers y CHs, y la presencia de arcos coronales con temperatura decreciente con la altura dentro de Streamers. Se encuentra que durante el mı́nimo CS 23/24, el más prolongado y con menor nivel de actividad de los tres perı́odos estudiados, la corona exhibió temperaturas algo menores. Se discute la implicancia de distintos resultados DEMT para el estudio del problema del calentamiento coronal. El modelo MHD reproduce la reconstrucción tomográfica de la distribución 3D de densidad y temperatura en la corona interna (r < 1.25 R ), pero sobrestima la densidad reconstruida a alturas mayores (2.5 − 6.0 R ). Se discuten las causas de discrepancias entre el modelo y las reconstrucciones. El campo de velocidad terminal del modelo, que reproduce mediciones in situ, se anticorrelaciona con los valores de densidad y temperatura reconstruidos tomográficamente en su región fuente en la corona interna y se correlaciona con su latitud terminal. Estos resultados apoyan la identificación de las lı́neas magnéticamente abiertas que rodean a Streamers como región fuente del viento solar lento.
+
+
+
+
+
+
