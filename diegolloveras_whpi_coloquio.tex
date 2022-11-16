@@ -343,7 +343,7 @@ $
 
 %--------------------------
 \frame{
-\titulo{LDEM características}
+\titulo{LDEM}
 
 \begin{columns}
 \column{0.5\textwidth}
@@ -353,16 +353,14 @@ $
 \end{center}
 \column{0.5\textwidth}
 \begin{itemize}
-\item[\bu] Grado de éxito 
-$
-R_i \equiv (1/K) \sum_{k} | 1 - { FBE_{k,i} } / {\int \mathrm{d}T \ \, Q_k(T)\ \, \mathcal{N}(T,}\,{\mathbf{\lambda}_i}{)} |
-$
+\item[\bu] \small{$R_i \equiv (1/K) \sum_{k} | 1 - { FBE_{k,i} } / { SYN_{k,i} }|$}
+%\item[\bu] \small{$R_i \equiv (1/K) \sum_{k} | 1 - { FBE_{k,i} } / {\int \mathrm{d}T \ \, Q_k(T)\ \, \mathcal{N}(T,}\,{\mathbf{\lambda}_i}{)} |$}
 \end{itemize}
 \includegraphics[width=0.9\textwidth,clip=]{figuras/R_1025_CR2081.pdf}
 %\hfill Lloveras et al. (2022)\\
 %\vskip 2cm
 \begin{itemize}
-\item[\bu] $R \sim 1\% \, (Streamer) \, y \sim 10\% \, (CHs)$
+\item[\bu] \small{$R \sim 1\% \, (Str.) \, y \sim 10\% \, (CHs)$}
 \end{itemize}
 %\hfill Lloveras et al. (2022)\\
 \end{columns}
@@ -372,10 +370,166 @@ $
 \includegraphics[width=0.4\textwidth,clip=]{figuras/Nueva_figura_paper_LDEM_2.eps}
 \includegraphics[width=0.4\textwidth,clip=]{figuras/Nueva_figura_paper_3.eps}
 \end{center}
+}
+%-----------------------
+\frame{
+\titulo{Tomographic Results along {\bf B}-lines}
+\footnotesize
+%\begin{columns}
+%\column{0.5\textwidth}
+\includegraphics[height=0.35\linewidth]{figuras/Grid-loops.png}
+\includegraphics[height=0.35\linewidth]{figuras/Traced-Loop.eps}
+%\column{0.5\textwidth}
+%\includegraphics[width=0.8\textwidth]{figuras/loop_Ne2.jpg}
+%\includegraphics[width=0.8\textwidth]{figuras/loop_T2.jpg}
+%\end{columns}
+\begin{center}
+\salto
+DEMT results along individual {\bf B}-lines are characterized by parametric fits:
+%\begin{eqnarray*}
+%\Ne(h) &=& N_0\ \textsf{exp}\left(-h/\lambda\right)
+$ N_e = N_0\, \exp{[-(h/\l)/(r/\mrsun)]}$\\
+$ T_m = ar + b$\\
+%\\
+%\Te(h) &=& T_0 \, + \, \gamma \, h
+%$$\hfill \ \ \ \ \ \ \ \ T_m = ar + b$$
+%\end{eqnarray*}
+and fitting parameters are analyzed statistically.\\
+\rojo{UP} \, \, \,  $(a \equiv \dTm_dr>0)$\\
+\azul{DOWN} $(a \equiv \dTm_dr<0)$
+\end{center}
+}
+%----------------Trazado - Ajuste DEMT
 
+
+
+
+%---------------------- DEMT vs AWSom
+%\frame{ 
+%\titulo{DEMT vs. AWSoM}
+%\scriptsize
+% Objetivo: Validar la capacidad del modelo en reproducir las reconstrucciones.
+%\bu Motivación: Es AWSoM capaz para reproducir las reconstrucciones tomográficas?
+%\vskip -0.2cm
+%\begin{center}
+%\includegraphics[width=0.495\textwidth,clip=]{figuras/map_Ne_CR2223_DEMT-AIA_H1_L733_r3d_multistart_1105_Rsun2223.eps}
+%\includegraphics[width=0.495\textwidth,clip=]{figuras/map_Tm_CR2223_DEMT-AIA_H1_L733_r3d_multistart_1105_Rsun2223_2.eps}\\
+%\includegraphics[width=0.495\textwidth,clip=]{figuras/map_Ne_awsom_2223_ener_new_1105_Rsun2223.eps}
+%\includegraphics[width=0.495\textwidth,clip=]{figuras/map_Te_awsom_2223_ener_new_1105_Rsun2223_2.eps}\\
+%\end{center}
+%\begin{itemize}
+%\item[\bu] En general hay buen acuerdo en magnitud y morfología de estructuras.\\
+%\item[\bu] Diferencia en HS.
+%\end{itemize}
+%}
+%--------------------------------------------
+\frame{
+\titulo{DEMT Validation of {\sc awsom}: Coronal Base}
+\footnotesize
+\begin{columns}
+\column{0.7\textwidth}
+\begin{center}
+\includegraphics[width=0.49\textwidth,clip=]{figuras/map_Ne_CR2223_DEMT-AIA_H1_L733_r3d_multistart_1105_Rsun2223.eps}
+\includegraphics[width=0.49\textwidth,clip=]{figuras/map_Tm_CR2223_DEMT-AIA_H1_L733_r3d_multistart_1105_Rsun2223_2.eps}
+\vskip 0.25cm
+\includegraphics[width=0.49\textwidth,clip=]{figuras/map_Ne_awsom_2223_ener_new_1105_Rsun2223.eps}
+\includegraphics[width=0.49\textwidth,clip=]{figuras/map_Te_awsom_2223_ener_new_1105_Rsun2223_2.eps}
+\vskip 0.25cm
+\includegraphics[width=0.49\textwidth,clip=]{figuras/perfil_paper_necr2223_bajo.eps}
+\includegraphics[width=0.49\textwidth,clip=]{figuras/perfil_paper_tecr2223_bajo.eps}
+\\
+\vspace{-0.05cm}
+Lloveras et al. (2022)
+\end{center}
+\column{0.3\textwidth}
+\bu Analysis of campaigns of Whole Heliosphere and Planetary Interactions (WHPI).
+\vskip 0.5cm
+\bu Consistent North O/C and CH.
+\vskip 0.5cm
+\bu Southern O/C shifted $\approx +20^\circ$ from CH.
+\vskip 1.5cm
+\bu $\Delta\Ne(r) \approx \pm 5\%$.
+\vskip 0.5cm
+\bu $\Delta\Te(r) \approx -15\%$.
+\vskip 0.5cm
+\end{columns}
 }
 
 
+%--------------- imág sintéticas
+\frame{
+\titulo{EUV Synthetic Images: SRT vs. {\sc awsom}}
+\begin{center}
+\includegraphics[width=0.99\textwidth,clip=]{figuras/Figura_2_paper_imag_sinteticas_2.eps}
+\end{center}
+$I_{Synt} \sim \int_{LOS} \mathrm{d}l \, N_e^2 \, Q_k$\\
+\vskip 0.2cm
+\begin{itemize}
+  \item[\bu] {\sc awsom} O/C discrepancy due to lack of accuracy of boundary condition. \
+\end{itemize}
+}
+%-------------------------------
+
+\frame{
+\titulo{WL-SRT Validation of {\sc awsom}: Larger Heights}
+\footnotesize
+\begin{center}
+\includegraphics[width=0.35\textwidth,clip=]{figuras/map_LASCOC2pB_CR2223_24hr-Cadence_Rmin225_Rmax825_IRmin25_IRmax60_60x60x120_BF2_r3D_l25e-5_vfinal_interpolado_2500_Rsun2223.eps}
+\includegraphics[width=0.35\textwidth,clip=]{figuras/map_Ne_awsom_2223_ener_new_2505_Rsun2219.eps}
+%\includegraphics[width=0.28\textwidth,clip=]{figuras/perfil_paper_necr2223_alto_simplepot.eps}
+\\
+$\Delta\Ne$ up to $+75\%$ at these larger heights $\rightarrow$ model's acceleration rates are too low.\\ 
+Current efforts include improvement in the energy cascading process of model.
+\vskip 1cm
+\includegraphics[width=\textwidth,clip=]{figuras/Figura_7_paper_imag_sintetica_2.eps}
+\vskip 0.75cm
+\end{center}
+}
+%----------------------------------
+\frame{
+\titulo{Ajuste densidad electrónica}
+\footnotesize
+\bu Rango de alturas grandes $\rightarrow$ ley de potencia.
+
+\begin{center}
+$N_e^{\rm (C2-SRT)}(r) = N_0\,\left(\,r/2.5\,\mrsun\right)^{-p} \rightarrow  \langle \l \rangle \equiv  \left\langle \left|  \frac{1}{{N_e(r)}} \, \frac{{{\rm d}N_e}}{{\rm d}r}(r) \right|^{-1} \right\rangle {= \frac{\langle r\rangle}{p} = \frac{4.25\,\mrsun}{p}} $ 
+%\end{equation}
+\end{center}
+\bu Errores: \azul{$\Delta N_m \approx 20\%$} y \azul{$\Delta \left< \lambda_n \right> \approx 15\%$}
+
+%\titulo{C2-SRT vs AWSoM: Comparación estadística}
+
+\begin{center}
+\includegraphics[width=0.5\textwidth,clip=]{figuras/perfil_paper_necr2223_alto_simplepot.eps}
+\end{center}
+%\end{columns}
+
+\bu Ne$(r=2.5\,\mrsun) \approx 0.6-0.7\times 10^5\,{\rm cm}^{-3}$\\
+
+\bu $\lambda_N\approx 1.4-1.6 \,\mrsun \rightarrow \left<p\right> \approx 2.8-3.3$ (consistente con otros estudios)\\
+
+\bu AWSoM sobrestima densidad basal en hasta 75\%\\
+\, \, \, \, \, \, \, $\rightarrow$ aceleración del viento es gradual y extendida
+}
+
+
+%-------------------------------
+\frame{
+\titulo{DEMT Validation of 3D Solar Wind Model}
+\footnotesize
+\begin{center}
+\includegraphics[width=0.45\textwidth,clip=]{figuras/map_Vr_awsom_2223_realization10_extended_new_5995_Rsunsom_.jpg}
+\includegraphics[width=0.45\textwidth,clip=]{figuras/scatter_plot_Vr_newtrace_20_CR-2223_filtro.eps}
+\\
+\includegraphics[width=0.45\textwidth,clip=]{figuras/scatter_plot_nedemtFIT_1055_vs_vrxsignoBr_20rs_CR-2223_trace_chip_.eps}
+\includegraphics[width=0.45\textwidth,clip=]{figuras/scatter_plot_tmdemt_MEAN_vs_vrxsignoBr_20rs_CR-2223_Test_trace_chip_.eps}
+\end{center}
+\bu Model's terminal wind speed anticorrelates with DEMT $\Ne$ and $\Te$ at source region.
+\vskip 0.1cm
+\bu Consistent with stable highly ionized slow wind flowing around Streamers $\rightarrow$\\
+\hskip 0.3cm
+No reconection process required (Oran et al., 2015).
+}
 
 
 
@@ -913,9 +1067,6 @@ $$\hfill \ \ \ \ \ \ \ \ T_m = ar + b$$
 \rojo{UP} \, \, \,  $(a \equiv \dTm_dr>0)$\\
 \azul{DOWN} $(a \equiv \dTm_dr<0)$
 \end{columns}
-
-
-
 }
 
 %-----------------------------
