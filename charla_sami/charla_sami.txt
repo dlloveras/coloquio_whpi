@@ -1,0 +1,20 @@
+
+*My idea with this slide is to give you a taste of what we have done throughout my PhD at IAFE together with my advisor Alberto Vaquez and in collaboration with Federico Nuevo and some guys from the univ of Michigan.
+
+*A title that summarizes my work could be 3D structure of the solar corona during minimum activity.
+
+*The main idea is to obtain a 3D distribution of Ne and Te of the solar corona in a specific range of heights.
+
+*To that end we used the solar rotational tomography technique. Probably you have heard about tomography or if you went to the doctor to have an MRI, well the mathematical problem to solve is very similar.
+
+*The difference is that in this case the observer practically does not move, and we must wait for a complete rotation of the Sun, allowing us to obtain information corresponding to all lines of sight.
+
+*Using EUV images from different instruments such as EIT, EUVI, and AIA, we apply this technique and obtain in this FoV a 3D distribution of Ne and Te. Here is an example of a latitude-longitude map at medium altitude. The high-density and temperature regions correspond to the streamer and low density and temperature correspond to the CHs. This symmetry is due to the fact that we are at a minimum.
+
+*We applied the same technique to polarized WL images from Lasco C2, and in this case, it allows us to reconstruct Ne in this FoV. Here is an example at the lowest reconstructed height. At this height, the CH is much larger and the area with higher density corresponds to closed field lines. At this height, the HCS is not yet formed.
+
+*We also use simulations given by the awsom model which is a 3D MHD model that deals with coronal heating by dissipation of Alfven waves. And here I show you a map of Ne and temperature at the same height and for the same rotation.
+
+*To characterize the corona we decided to study thermodynamics along the different magnetic structures. Then we combined the magnetic extrapolation with the data grids and fitted the temperature with a straight line and the density with an exponential and with a simple power law, depending on the height. 
+
+*So, at the end of the PhD, along  these 3 papers we used several instruments to reconstruct and simulate rotations along the solar 3 minima, we determined Ne, Te, and in some cases energetic quantities, along diff magnetic structures. allowing us to characterize the low corona. We compared real images with synthetic images obtained from the tomographic reconstructions and the simulations. The tomographic synthetic images are very good, I think this is very interesting. And finally, we validate the simulations providing feedback to improve the AWSoM model.
