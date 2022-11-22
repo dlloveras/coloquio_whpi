@@ -64,13 +64,13 @@
 \title[WHPI Colloquim]{\bf\large Three-Dimensional Structure of the Corona During WHPI Campaign Rotations CR-2219 and CR-2223}
 \date{22 November 2022}
 \author[Diego Lloveras]
-       {{\bf D. Lloveras, A. Vásquez, F. Nuevo, R. Frazin, W. Manchester IV, N. Sachdeva, B. Van der Holst, P. Lamy, and H. Gilardy}\\
+       {{\bf D. Lloveras$^1$, A. Vásquez$^2$, F. Nuevo$^2$, R. Frazin$^3$, W. Manchester IV$^3$, N. Sachdeva$^3$, B. Van der Holst$^3$, P. Lamy$^4$, and H. Gilardy$^4$}\\
        \vskip 0.1cm
        {\footnotesize
-       Grupo de estudios Heliofísicos de Mendoza, U. de Mendoza, Argentina\\ 
-       Instituto de Astronomía y Física del Espacio (CONICET--UBA), Argentina\\ 
-       Department of Climate and Space Sciences and Engineering, U. of Michigan, USA\\ 
-       Laboratoire Atmosphéres, Milieux et Observations Spatiales, France.}}
+       $^1$Grupo de estudios Heliofísicos de Mendoza, U. de Mendoza, Argentina\\ 
+       $^2$Instituto de Astronomía y Física del Espacio (CONICET--UBA), Argentina\\ 
+       $^3$Department of Climate and Space Sciences and Engineering, U. of Michigan, USA\\ 
+       $^4$Laboratoire Atmosphéres, Milieux et Observations Spatiales, France.}}
 %\vskip -1cm
   \institute[] %\institute[IAFE]
   {\begin{center}
@@ -96,7 +96,7 @@
 %-------------------> INTRODUCCION <----------------------------------------------------
 
 \frame{
-\titulo{Estructura de la charla}
+\titulo{What is the paper about?}
 \footnotesize
 \vspace{-0.25cm}
 %Motivación
@@ -107,47 +107,22 @@
 %\end{itemize}
 
 \begin{itemize}
-\item Introducción:\\
-\bu Corona solar -- Ciclo de actividad -- Emisividad EUV/LB.
-\item Instrumentos y Metodología:\\
-\bu Tomografía Solar Rotacional (LB/EUV$\rightarrow$DEMT)\\
- 
-\bu Modelo magnético (PFSS)\\
-\bu Trazado de líneas magnéticas.
-\item Resultados: \\
-\begin{itemize}
-  \item Comparación de los tres últimos mínimos de actividad solar (DEMT).
-  \vskip 0.3cm
-  \item Modelo MHD 3D (AWSoM)\\
-  \bu Comparación AWSoM vs DEMT\\
-  \bu Comparación AWSoM vs tomografía LB
-  \vskip 0.3cm
-\item Viento solar\\
-\bu Correlación de propiedades terminales con DEMT
-\end{itemize}
-\salto
-\item Conclusiones generales.
-\end{itemize}
-}
-%----------------------------------------
+\item[\bu] Characterization of the corona during a minimum of activity and the validation of an MHD simulation.\\
 
-\frame{
-\titulo{Rotaciones analizadas}
-\footnotesize
-\vspace{-0.8cm}
-%\begin{columns}
-%\column{0.2\textwidth}
-%\centering
-%\vspace{-4cm}
+%The previous WSM and WHI campaigns have been the subject of DEMT studies complemented with potential field source surface models of the global coronal magnetic field. 
 
-%\column{0.8\textwidth}
-\begin{center}
-\includegraphics[width=0.99\textwidth,height=0.75\textwidth]{figuras/ciclos_ssn_recorte3.pdf}
-\end{center}
-%\end{columns}
+%In this work, ..
+\vskip 0.3cm
+\item[\bu] The EUV-SRT and WL-SRT results for the WHPI campaigns were traced along the magnetic field lines of the AWSoM model simulations, allowing to analyze the thermodynamic in different magnetic structures.
+\vskip 0.3cm
+\item[\bu] A validation of the AWSoM model was carried out by quantitatively comparing EUV and pB-WL images with synthetic images. 
+\vskip 0.3cm
+\item[\bu] The relation between the terminal solar wind speed of the AWSoM model and the DEMT reconstructed electron density and temperature at the coronal base was also investigated.
+\end{itemize}
 }
 
 %----------------> TOMOGRAFIA <------------------------------------------------------
+\begin{comment}
 \frame{
 \titulo{Tomography}
 \footnotesize
@@ -164,7 +139,7 @@
 \end{center}
 \end{itemize}
 }
-
+\end{comment}
 %----------------------------------------------------------------------
 \frame{
 \titulo{SRT Computational Grid}
@@ -264,7 +239,7 @@ $
 }
 
 %-------------------> FBE + mamuschkas
-
+\begin{comment}
 \frame{ 
 \titulo{SRT-EUV Output: 3D Filter Band Emisivity}
 \vspace{-0.35cm}
@@ -295,6 +270,7 @@ $
  \column{0.6\textwidth}
 \end{columns}
 }
+\end{comment}
 %----------------------------------- LDEM
 
 \frame{
@@ -333,7 +309,7 @@ $
 \azul{\int \mathrm{d}T \ \, Q_k(T)\ \, \mathcal{N}(T,}\,\rojo{\mathbf{\lambda}_i}\azul{)} \ 
 |^2 
 $.
-\item[\bu] Grado de éxito 
+\item[\bu] Success rate
 $
 R_i \equiv (1/K) \sum_{k} | 1 - { FBE_{k,i} } / {\int \mathrm{d}T \ \, Q_k(T)\ \, \mathcal{N}(T,}\,{\mathbf{\lambda}_i}{)} |
 $
@@ -352,10 +328,10 @@ $
 \includegraphics[height=0.6\textwidth]{figuras/Grid_LDEM.png}
 \end{center}
 \column{0.5\textwidth}
-\begin{itemize}
-\item[\bu] \small{$R_i \equiv (1/K) \sum_{k} | 1 - { FBE_{k,i} } / { SYN_{k,i} }|$}
+%\begin{itemize}
+%\item[\bu] \small{$R_i \equiv (1/K) \sum_{k} | 1 - { FBE_{k,i} } / { SYN_{k,i} }|$}
 %\item[\bu] \small{$R_i \equiv (1/K) \sum_{k} | 1 - { FBE_{k,i} } / {\int \mathrm{d}T \ \, Q_k(T)\ \, \mathcal{N}(T,}\,{\mathbf{\lambda}_i}{)} |$}
-\end{itemize}
+%\end{itemize}
 \includegraphics[width=0.9\textwidth,clip=]{figuras/R_1025_CR2081.pdf}
 %\hfill Lloveras et al. (2022)\\
 %\vskip 2cm
@@ -371,6 +347,62 @@ $
 \includegraphics[width=0.4\textwidth,clip=]{figuras/Nueva_figura_paper_3.eps}
 \end{center}
 }
+
+%--------------------------------------------
+\frame{
+\titulo{DEMT Validation of {\sc awsom}: Coronal Base}
+\footnotesize
+%\begin{columns}
+%\column{0.7\textwidth}
+\begin{center}
+\includegraphics[width=0.49\textwidth,clip=]{figuras/map_Ne_CR2223_DEMT-AIA_H1_L733_r3d_multistart_1105_Rsun2223.eps}
+\includegraphics[width=0.49\textwidth,clip=]{figuras/map_Tm_CR2223_DEMT-AIA_H1_L733_r3d_multistart_1105_Rsun2223_2.eps}
+\vskip 0.25cm
+\includegraphics[width=0.49\textwidth,clip=]{figuras/map_Ne_awsom_2223_ener_new_1105_Rsun2223.eps}
+\includegraphics[width=0.49\textwidth,clip=]{figuras/map_Te_awsom_2223_ener_new_1105_Rsun2223_2.eps}
+\vskip 0.25cm
+%\includegraphics[width=0.49\textwidth,clip=]{figuras/perfil_paper_necr2223_bajo.eps}
+%\includegraphics[width=0.49\textwidth,clip=]{figuras/perfil_paper_tecr2223_bajo.eps}
+\vspace{-0.05cm}
+
+\end{center}
+%\column{0.3\textwidth}
+%\bu Analysis of campaigns of Whole Heliosphere and Planetary Interactions (WHPI).
+%\vskip 0.5cm
+\begin{columns}
+\column{0.5\textwidth}
+%\bu Consistent North O/C and CH.\\
+%\vskip 0.5cm
+\bu Good consistency, in terms of shape and size of the streamer belt and the CHs.\\
+%\vskip 1.5cm
+\column{0.5\textwidth}
+%\bu $\Delta\Ne(r) \approx \pm 5\%$.\\
+%\vskip 0.5cm
+%\bu $\Delta\Te(r) \approx -15\%$.\\
+%\vskip 0.5cm
+\bu Southern O/C shifted $\approx +20^\circ$ from CH.\\
+\hfill van der Holst et al (2014)
+\end{columns}
+}
+
+
+
+%--------------- imág sintéticas
+\frame{
+\titulo{EUV Synthetic Images: SRT vs. {\sc awsom}}
+\begin{center}
+\includegraphics[width=0.99\textwidth,clip=]{figuras/Figura_2_paper_imag_sinteticas_2.eps}
+\end{center}
+$I_{Synt} \sim \int_{LOS} \mathrm{d}l \, N_e^2 \, Q_k$\\
+\vskip 0.2cm
+%\begin{itemize}
+  %\item[\bu] 
+\bu {\sc awsom} O/C discrepancy due to lack of accuracy of boundary condition.$ \rightarrow$
+ADAPT-GONG not able to reproduce the large-scale structure of the CH boundary in this specific region.
+%\end{itemize}
+}
+
+
 %-----------------------
 \frame{
 \titulo{Tomographic Results along {\bf B}-lines}
@@ -383,9 +415,11 @@ $
 %\includegraphics[width=0.8\textwidth]{figuras/loop_Ne2.jpg}
 %\includegraphics[width=0.8\textwidth]{figuras/loop_T2.jpg}
 %\end{columns}
-\begin{center}
+%\begin{center}
 \salto
-DEMT results along individual {\bf B}-lines are characterized by parametric fits:
+\begin{columns}
+\column{0.5\textwidth}
+Results along individual {\bf B}-lines are characterized by parametric fits:
 %\begin{eqnarray*}
 %\Ne(h) &=& N_0\ \textsf{exp}\left(-h/\lambda\right)
 $ N_e = N_0\, \exp{[-(h/\l)/(r/\mrsun)]}$\\
@@ -397,13 +431,76 @@ $ T_m = ar + b$\\
 and fitting parameters are analyzed statistically.\\
 \rojo{UP} \, \, \,  $(a \equiv \dTm_dr>0)$\\
 \azul{DOWN} $(a \equiv \dTm_dr<0)$
-\end{center}
+\column{0.5\textwidth}
+\includegraphics[width=0.99\textwidth]{figuras/tabla1_paper.png}
+\end{columns}
+%\end{center}
 }
 %----------------Trazado - Ajuste DEMT
 
+\frame{
+\titulo{Position of traced magnetic field lines}
+\includegraphics[width=0.49\textwidth,clip=]{figuras/Highpoint_2223_demt_BAJO_Rpoint-map_2.eps}
+\includegraphics[width=0.49\textwidth,clip=]{figuras/Highpoint_2223_awsom_BAJO_Rpoint-map_2.eps}\\
+%\begin{columns}
+%\column{0.33\textwidth}
+%\footnotesize
+\centering
+\begin{tabular}{c c c }
+\hline
+  Type  & Characteristic     \\
+\hline
+   0   & \azul{Closed Small Down}   \\
+   I   & \orange{Closed Small Up}   \\
+   II  & \rojo{Closed Large Up}     \\
+   III & \cian{Open Large Up}    \\
+\hline
+\end{tabular}
+%\column{0.33\textwidth}
+%\includegraphics[width=0.99\textwidth,clip=]{figuras/perfil_paper_necr2223_bajo.eps}
+%\footnotesize
+%\bu Streamer (T0 $\rightarrow$ TII):\\
+%$N_{CB}$ decrease; $\lambda_N$ y $\left<T_m\right>$ increases. \\
+%\column{0.33\textwidth}
+%\includegraphics[width=0.99\textwidth,clip=]{figuras/perfil_paper_tecr2223_bajo.eps}
+%\footnotesize
+%\bu CHs (T III): \\
+%$N_{CB}$, $\lambda_N$ y $\left<T_m\right>$ decrease.\\
+%\end{columns}
+%\bu $\Delta\Ne(r) \approx \pm 5\%$.
+%\bu $\Delta\Te(r) \approx -15\%$.\\
+}
+%-------------------------------------
 
 
+\frame{
+\titulo{Average fits}
+\begin{columns}
+\column{0.5\textwidth}
+\includegraphics[width=0.99\textwidth,clip=]{figuras/perfil_paper_necr2223_bajo.eps}
+\column{0.5\textwidth}
+\includegraphics[width=0.99\textwidth,clip=]{figuras/perfil_paper_tecr2223_bajo.eps}
+\end{columns}
+\bu Streamer (T0 $\rightarrow$ TII): $N_{CB}$ decrease; $\lambda_N$ y $\left<T_m\right>$ increases. \\
+\bu CHs (T III): $N_{CB}$, $\lambda_N$ y $\left<T_m\right>$ decrease.\\
+\bu $\Delta\Ne(r) \approx \pm 5\%$.
+\bu $\Delta\Te(r) \approx -15\%$.\\
 
+}
+
+%---------------------------------------
+
+
+\frame{
+\begin{columns}
+\column{0.8\textwidth}
+\includegraphics[width=0.99\textwidth,clip=]{figuras/tabla2_paper_2022.png}
+\column{0.2\textwidth}
+Nuevo et al. (2015)\\
+Lloveras et al. (2017\\
+\end{columns}
+
+}
 %---------------------- DEMT vs AWSom
 %\frame{ 
 %\titulo{DEMT vs. AWSoM}
@@ -422,80 +519,38 @@ and fitting parameters are analyzed statistically.\\
 %\item[\bu] Diferencia en HS.
 %\end{itemize}
 %}
-%--------------------------------------------
-\frame{
-\titulo{DEMT Validation of {\sc awsom}: Coronal Base}
-\footnotesize
-\begin{columns}
-\column{0.7\textwidth}
-\begin{center}
-\includegraphics[width=0.49\textwidth,clip=]{figuras/map_Ne_CR2223_DEMT-AIA_H1_L733_r3d_multistart_1105_Rsun2223.eps}
-\includegraphics[width=0.49\textwidth,clip=]{figuras/map_Tm_CR2223_DEMT-AIA_H1_L733_r3d_multistart_1105_Rsun2223_2.eps}
-\vskip 0.25cm
-\includegraphics[width=0.49\textwidth,clip=]{figuras/map_Ne_awsom_2223_ener_new_1105_Rsun2223.eps}
-\includegraphics[width=0.49\textwidth,clip=]{figuras/map_Te_awsom_2223_ener_new_1105_Rsun2223_2.eps}
-\vskip 0.25cm
-\includegraphics[width=0.49\textwidth,clip=]{figuras/perfil_paper_necr2223_bajo.eps}
-\includegraphics[width=0.49\textwidth,clip=]{figuras/perfil_paper_tecr2223_bajo.eps}
-\\
-\vspace{-0.05cm}
-Lloveras et al. (2022)
-\end{center}
-\column{0.3\textwidth}
-\bu Analysis of campaigns of Whole Heliosphere and Planetary Interactions (WHPI).
-\vskip 0.5cm
-\bu Consistent North O/C and CH.
-\vskip 0.5cm
-\bu Southern O/C shifted $\approx +20^\circ$ from CH.
-\vskip 1.5cm
-\bu $\Delta\Ne(r) \approx \pm 5\%$.
-\vskip 0.5cm
-\bu $\Delta\Te(r) \approx -15\%$.
-\vskip 0.5cm
-\end{columns}
-}
 
 
-%--------------- imág sintéticas
-\frame{
-\titulo{EUV Synthetic Images: SRT vs. {\sc awsom}}
-\begin{center}
-\includegraphics[width=0.99\textwidth,clip=]{figuras/Figura_2_paper_imag_sinteticas_2.eps}
-\end{center}
-$I_{Synt} \sim \int_{LOS} \mathrm{d}l \, N_e^2 \, Q_k$\\
-\vskip 0.2cm
-\begin{itemize}
-  \item[\bu] {\sc awsom} O/C discrepancy due to lack of accuracy of boundary condition. \
-\end{itemize}
-}
 %-------------------------------
 
 \frame{
 \titulo{WL-SRT Validation of {\sc awsom}: Larger Heights}
 \footnotesize
 \begin{center}
-\includegraphics[width=0.35\textwidth,clip=]{figuras/map_LASCOC2pB_CR2223_24hr-Cadence_Rmin225_Rmax825_IRmin25_IRmax60_60x60x120_BF2_r3D_l25e-5_vfinal_interpolado_2500_Rsun2223.eps}
-\includegraphics[width=0.35\textwidth,clip=]{figuras/map_Ne_awsom_2223_ener_new_2505_Rsun2219.eps}
+\includegraphics[width=0.45\textwidth,clip=]{figuras/map_LASCOC2pB_CR2223_24hr-Cadence_Rmin225_Rmax825_IRmin25_IRmax60_60x60x120_BF2_r3D_l25e-5_vfinal_interpolado_2500_Rsun2223.eps}
+\includegraphics[width=0.45\textwidth,clip=]{figuras/map_Ne_awsom_2223_ener_new_2505_Rsun2219.eps}
 %\includegraphics[width=0.28\textwidth,clip=]{figuras/perfil_paper_necr2223_alto_simplepot.eps}
 \\
-$\Delta\Ne$ up to $+75\%$ at these larger heights $\rightarrow$ model's acceleration rates are too low.\\ 
-Current efforts include improvement in the energy cascading process of model.
-\vskip 1cm
-\includegraphics[width=\textwidth,clip=]{figuras/Figura_7_paper_imag_sintetica_2.eps}
-\vskip 0.75cm
+%$\Delta\Ne$ up to $+75\%$ at these larger heights $\rightarrow$ model's acceleration rates are too low.\\ 
+%Current efforts include improvement in the energy cascading process of model.
+\bu Good overall consistency in shape and size of Streamer and CHs.
 \end{center}
+\vskip .5cm
+\includegraphics[width=\textwidth,clip=]{figuras/Figura_7_paper_imag_sintetica_2.eps}
+%\vskip 0.75cm
+$I_{Synt} \sim \int_{LDV} \mathrm{d}l \, N_e $\
 }
 %----------------------------------
 \frame{
-\titulo{Ajuste densidad electrónica}
+\titulo{Ne fit along B-lines}
 \footnotesize
-\bu Rango de alturas grandes $\rightarrow$ ley de potencia.
+\bu Simple power law
 
 \begin{center}
 $N_e^{\rm (C2-SRT)}(r) = N_0\,\left(\,r/2.5\,\mrsun\right)^{-p} \rightarrow  \langle \l \rangle \equiv  \left\langle \left|  \frac{1}{{N_e(r)}} \, \frac{{{\rm d}N_e}}{{\rm d}r}(r) \right|^{-1} \right\rangle {= \frac{\langle r\rangle}{p} = \frac{4.25\,\mrsun}{p}} $ 
 %\end{equation}
 \end{center}
-\bu Errores: \azul{$\Delta N_m \approx 20\%$} y \azul{$\Delta \left< \lambda_n \right> \approx 15\%$}
+\bu Errors: \azul{$\Delta N_m \approx 20\%$} y \azul{$\Delta \left< \lambda_n \right> \approx 15\%$}
 
 %\titulo{C2-SRT vs AWSoM: Comparación estadística}
 
@@ -506,16 +561,19 @@ $N_e^{\rm (C2-SRT)}(r) = N_0\,\left(\,r/2.5\,\mrsun\right)^{-p} \rightarrow  \la
 
 \bu Ne$(r=2.5\,\mrsun) \approx 0.6-0.7\times 10^5\,{\rm cm}^{-3}$\\
 
-\bu $\lambda_N\approx 1.4-1.6 \,\mrsun \rightarrow \left<p\right> \approx 2.8-3.3$ (consistente con otros estudios)\\
+\bu $\lambda_N\approx 1.4-1.6 \,\mrsun \rightarrow \left<p\right> \approx 2.8-3.3$ (consistent with other studies)\\
 
-\bu AWSoM sobrestima densidad basal en hasta 75\%\\
-\, \, \, \, \, \, \, $\rightarrow$ aceleración del viento es gradual y extendida
+\bu AWSoM overestimate basal density up to 75\%  $\rightarrow$ model's SW acceleration rates are too low\\
+%\, \, \, \, \, \, \, $\rightarrow$ solar wind acceleration is gradual and spread out
+
+%$\Delta\Ne$ up to $+75\%$ at these larger heights $\rightarrow$ model's acceleration rates are too low.\\ 
+%Current efforts include improvement in the energy cascading process of model.
 }
 
 
 %-------------------------------
 \frame{
-\titulo{DEMT Validation of 3D Solar Wind Model}
+\titulo{Ne and Te in the source region of the Solar Wind}
 \footnotesize
 \begin{center}
 \includegraphics[width=0.45\textwidth,clip=]{figuras/map_Vr_awsom_2223_realization10_extended_new_5995_Rsunsom_.jpg}
@@ -531,8 +589,121 @@ $N_e^{\rm (C2-SRT)}(r) = N_0\,\left(\,r/2.5\,\mrsun\right)^{-p} \rightarrow  \la
 No reconection process required (Oran et al., 2015).
 }
 
+%------------------------
+\frame{
+\titulo{Conclusions}
+
+\begin{itemize}
+%DEMT\\
+  \item[\bu] We characterize the thermodynamic structure of the corona. Trends are all in accordance with previous DEMT studies (Lloveras et al., 2017, 2020).
+  \item[\bu] Compared to CRs 2081/2082 (during the SC 23/24 deep minimum epoch), the WHPI targets exhibit a 20\% lower coronal base density, a 20\% larger scale height and a 20\% larger electron temperature.
+%AWSom  
+  \item[\bu] AWSoM in comparison with DEMT: good agreement in Ne, and Te is up to 20\% smaller (beyond uncertainty).
+  \item[\bu] AWSoM in comparison with C2: Ne of the model is up to 75\% larger (beyond uncertainty). Likely due to the acceleration of the model being more gradual and extended than is observed.
+  %Solar Wind
+  \item[\bu] The model's terminal wind speed along field lines is anti-correlated with reconstructed DEMT values of Ne and Te at the source region.
+%  \vskip 0.3cm
+%  \item Hallamos la presencia de arcos down en los tres mínimos.
+%  \vskip 0.3cm
+%  \item Por primera vez aplicamos simultáneamente la técnica tomogáfica utilizando imágenes EUV y LB. Esto constituye una valiosa herramienta de condicionamiento para la validación y el desarrollo de modelos MHD 3D que tengan como objetivo la predicción meteorológica espacial.
+%  \vskip 0.3cm
+%  \item Estudiamos la relación entre el campo de velocidad terminal del viento y la densidad y temperatura en su región fuente.
+
+\end{itemize}
+}
+%---------------
+\begin{comment}
+\frame{ 
+\titulo{Conclusiones DEMT}
+
+%conclusion DEMT de comparacion de 3 mínimos. \\
+\footnotesize
 
 
+\btr Características generales:\\
+\bu Los Streamers exhiben $N_{CB} \approx 1.0-1.2\times 10^8\,{\rm cm}^{-3}$, los CHs se caracterizan por una densidad del orden de la mitad. \\
+\vskip 0.2cm
+\bu $\lambda_N \approx 7-11\times 10^{-2}\,\mrsun$, con los valores menores correspondiendo a las latitudes más bajas del streamer y a los CHs. \\
+\vskip 0.2cm
+\bu Los streamers se caracterizan por $\left<T_m\right>\approx 1.2-1.6$~MK (con las temperaturas menores correspondiendo a las latitudes más bajas) mientras que los CHs exhiben $T_{m} \lesssim 1$~MK.\\
+\vskip 0.2cm
+\bu Hallamos la presencia de loops down en los 3 mínimos. Nuevo et al. (2013); Schiff and Cranmer (2016). Presenta condicionamiento al modelo de calentamiento coronal.\\
+%Correlación entre número de líneas tipo 0 y mínimo de actividad.\\
+%$\beta > 1$ favorece la conversión de ondas de Alfvén en modos compresibles.\\
+
+\vskip 0.7cm
+\btr Comparación de los últimos 3 mínimos:\\
+\bu $\left<T_m^{SC \, 22/23}\right>  > \left<T_m^{SC \, 23/24}\right>  \lesssim \left<T_m^{SC \, 24/25}\right> $\\
+\vskip 0.2cm
+\bu $N_{CB}^{SC \, 22/23} > N_{CB}^{SC \, 23/24} > N_{CB}^{SC \, 24/25}$\\
+\vskip 0.2cm
+\bu SC 22/23 fue el mas breve, activo e intermitente en su nivel de actividad, seguido por SC 23/24 y SC 24/25.\\
+%\vskip 0.1cm
+%\bu \# Loops down máximo durante SC 23/24.
+
+}
+\end{comment}
+%--------------------------------------------------------
+
+\begin{comment}
+\frame{
+\titulo{Rotaciones analizadas}
+\footnotesize
+\vspace{-0.8cm}
+%\begin{columns}
+%\column{0.2\textwidth}
+%\centering
+%\vspace{-4cm}
+
+%\column{0.8\textwidth}
+\begin{center}
+\includegraphics[width=0.99\textwidth,height=0.75\textwidth]{figuras/ciclos_ssn_recorte3.pdf}
+\end{center}
+%\end{columns}
+}
+
+%--------------- Carrmaps
+\frame{
+\titulo{Reconstrucción DEMT: densidad y temperatura}
+\begin{columns}
+\column{0.35\textwidth}
+\centering
+CR-1915 (EIT)\\
+$\approx$WSM
+\vskip 0.3cm
+\includegraphics[width=0.95\textwidth,clip=]{figuras/Ne_1105_CR1915.pdf}
+\vskip 0.1cm
+\includegraphics[width=0.95\textwidth,clip=]{figuras/Tm_1105_CR1915.pdf}
+
+%\vskip 0.1cm
+
+
+\column{0.35\textwidth}
+\centering
+CR-2081 (EUVI)\\
+$\sim$WHI
+\vskip 0.3cm
+%\includegraphics[width=0.95\textwidth]{figuras/map_Ne_CR2082_DEMT-EUVI_behind_H1-L3523_r3d_1105_Rsun.pdf}
+%\includegraphics[width=0.95\textwidth]{figuras/map_Tm_CR2082_DEMT-EUVI_behind_H1-L3523_r3d_1105_Rsun.pdf}
+\includegraphics[width=0.95\textwidth]{figuras/Ne_1105_CR2081.pdf}
+\includegraphics[width=0.95\textwidth]{figuras/Tm_1105_CR2081.pdf}
+
+\column{0.35\textwidth}
+\centering
+CR-2223 (AIA)\\
+WHPI
+\includegraphics[width=0.95\textwidth,clip=]{figuras/map_Ne_CR2223_DEMT-AIA_H1_L733_r3d_multistart_1105_Rsun2223.eps}
+\includegraphics[width=0.95\textwidth,clip=]{figuras/map_Tm_CR2223_DEMT-AIA_H1_L733_r3d_multistart_1105_Rsun2223_2.eps}
+
+\end{columns}  
+Lloveras et al. (2017,2020,2022)\\
+\vskip 0.3cm
+\bu Same Azimuthal symmetry\\
+\bu Same thermodynamic regions.\\
+\bu Good O/C boundary agreement.
+}
+\end{comment}
+%--------------------------------------------------------
 
 
 
