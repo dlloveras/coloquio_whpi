@@ -1,241 +1,59 @@
 
 Charla WHPI
 
-El trabajo de esta tesis se centra en la caracterización observacional de la estructura termodinámica tridimensional (3D) de la corona solar a escala global durante los últimos tres mı́nimos de actividad solar utilizando principalmente reconstrucciones tomográficas. Implementamos simulaciones magnetohidrodinámicas 3D de la corona y del viento solar, lo que permite analizar los resultados tomográficos a lo largo de diferentes estructuras magnéticas coronales. Y además realizamos un análisis comparativo para validar las simulaciones con las reconstrucciones.
-
 1- hello everyone, In this talk I'm going to tell you about this paper that has been publised a few months ago in the Jornal of geophisical research titled 3D structure of the corona during the whole heliosphere and planetary interval campaing rotation 2219 and 2223.
-
-
 2- Que hicimos?
-
-In one line in this paper we seek to characterize the corona during a minimum and validate an MHD simulation.
-
-
-
-The previous WSM and WHI campaigns have been the subject of DEMT studies complemented with potential field source surface models of the global coronal magnetic field. In this work, the DEMT and WL-SRT results for the WHPI campaigns were traced along the magnetic field lines of the AWSoM model simulations, allowing to analyze the tomographic results in different magnetic structures, as well as to validate the model in different coronal regions and ranges of heliocentric height.
-
-In this work, a similar quantitative validation of the AWSoM model was carried out by quantitatively comparing actual EUV and pB images with synthetic images computed from the 3D electron density and temperature of the model. 
-
-The relationship between the terminal solar wind speed of the AWSoM model and the DEMT reconstructed electron density and temperature at the coronal base was also investigated.
-
-AWSoM: AWSoM is a self-consistent 3D MHD model of the solar corona and inner heliosphere that addresses the heating of the solar corona by including low-frequency Alfvén wave turbulence.
-
-In its continuous development, the AWSoM model is the subject of validation efforts with observations both in the low corona and the heliosphere. In particular, WL-SRT and DEMT have both been used as part of validation studies. The present study constitutes a new contribution in this series of works.
-
 3-
-
 4-
 Each of those intensity values is the result of a line-of-sight (LOS) integral of an unknown coronal quantity times a known weighting factor which depends on the geometry of the observation and the emission mechanism.
 
-y señal medida en todos los pixels de toda las erie temporal de imagenes. A es la matriz de proyeccion que contiene  toda la informacion geometrica. y la incognita X es
-
-En el caso de WL la incognica es la distribucion de la densidad electronica y la funcion geometrica incluye el factor de scattering thompson.
-
-En el caso de EUV la incognica son las filter band emisivities
-
-This is a global optimization problem
-La forma de resolver este problema es minimizando esta funcion global. Pimer termino
-
-Lo que importa que se lleven de esta diapositiva es que en el caso de WL-SRT obtenemos la distrib 3D de la densidad electronica. Pero en el caso de EUV obtenemos la 3D de FBE para cada banda.
-
-5- Eta es el modelo de emisivdad de Chianti.
-The second step is to calculate the local DEM
-
-Thermal distribution
-
+5- 
 6- streamer es dominante la banda 193 con temperatura caracteristica 1.5MK y en CH la emisivdad dominantes es la de 171 con temperaturas caracteristicas del orden de 1MK. Y las distribuciones termicas asociadas.
-Mencionar WT.
 
-This plots shows the statistical distribution of the LDEM temperature spread WT relative to the LDEM mean temperature Te , for all the tomographic voxels in both the streamer (solid line-style) and the CHs (dashed line-style). The ratio WT/Te represents the characteristic variability of the electron temperature in a voxel. 
-
-The characteristic (median) relative temperature spread is W T /T e ≈ 25% in voxels of the streamer and ≈45% in voxels of the CHs. 
+This ratio WT/Te represents the characteristic variability of the electron temperature in a voxel. 
 
 A similar degree of relative variability is expected to characterize the distribution of electron density within each voxel, whose scale height along magnetic field lines is proportional to the electron temperature
 
-
-
 7-
-I'm not going to explain in detail the AWSoM model in this talk
+The model use adapt-gong magnetograms as boundary condition and addresses the coronal heating through the injection of energy by dissipation of Alfven waves. The model is subject to continuous validation with observations as it is updated and improved. And we are going to compare tomographic reconstructions with steady-state runs.
 
-AWSoM is a self consistent 3D physics-based MHD model that simulates from transition region up to 1 AU. The model use adapt-gong magnetograms as boundary condition and addresses the coronal heating through the injection of energy by dissipation of Alfven waves.
+8-A very usefull validation test
 
-The model is subject to continuous validation with observations as it is updated and improved. And we are going to compare tomographic reconstructions with steady-state runs.
-
-Las lineas negras denotan la separacion entre las lineas magneticamente abiertas en la zona polar de la lineas magneticamente cerradas. Y son dadas por el modelo MHD. Es por esto que hay una excelente concordancia en los mapas de abajo, pero cabe destacar que hay una excelente concordancia en la tomografia, especialmente en el hemisferio norte. La mayor discrepancia se encuentra en esta region del hemisferio sur done segun el modelo MHD deberiamos encontrar densidades y temperaturas consistentes con un CH.
-
-Vemos que en general la simulacion y la reconstruccion comparan muy bien. Se destacan algunas caracteristicas que sugieren la presencia de distintas regiones termodinamicas, por ejemplo  temperatura que aumenta desde el ecuador hacia las latitudes medias y luego decae en la zona polar. Y en el caso de densidad se observa un decaimiento desde el ecuador hasta la zona polar. Esto nos lleva a estudiar la termodinamica a lo largo de distintas estructuras magneticas, como veremos en las prox diapositivas.
-
-
-
-
-
-8-Comparison of synthetic images derived from models against actual data is an important validation test
-
-
-Es muy util en estos casos comparar las imagenes dato de cada banda con con las imagenes sintécias tomograficas y las simuladas.
-
-Los histogramas representan el cociente pixel a pixel donde podemos ver que las imagenes tomograficas sinteticas comparan muy bien con las imagenes dato. Noten que en esta el CH se extiende hasta latitudes intermedias y no ahy un buen acuerdo con los datos, lo cual si sucede con la tomografia.
-
-But this is not a problem in awsom model, the O/C boundary discrepancy is due to lack of accuracy of the magnetogram.
-
-
+Comparison of synthetic images derived from models against actual data is an important validation test
 
 9-
-
-Once the products of tomographic reconstructions (either C2-SRT or DEMT) are found, and the AWSoM model run has been calculated, the former are traced along the field lines of the latter, in order to characterize the global thermodynamic state of the solar corona in distinct magnetic structures.
-
-Each traced magnetic field lines is classified as open or closed according to their full geometry. Closed magnetic field line were separated in two segments that extend from the coronal base up to the apex. For each traced open field line and for each segment of the closed field lines, simple functional fits are applied in order to characterize the traced tomographic results in a simple way.
-
+In order to characterize the global thermodynamic state of the solar corona along different magnetic structures, the tomographic and simulation results are traced along magnetic field lines. Each field lines is classified as open or closed according to their full geometry. Closed magnetic field line were separated in two segments that goes from the coronal base up to the apex. For each segment a fits are applied in order to characterize the traced results in a simple way.
 
 In the case of DEMT, a hydrostatic isotermic fit is applied to the electron density as a function of height, and a linear fit is applied to the electron temperature as a function of height
 
+10-
+Here I'm showing you the location of each selected leg, divided in four colours.
+Here each dot represents a magnetic line.
 
-
-Con la intencion de estudiar la termodinamica a lo largo de distintas estructuras magneticas, combinamos la geometria de las lineas con los resultados 3D. Esto nos permite ajustar la densidad y la temperatura a lo largo de individual B-lines. Utilizamos una funcion exponencial para el caso de la densidad y una funcion  lineal en el caso de la temperatura 
-XQ?
-Al mismo tiempo seleccionamos distintos tipos de lineas magneticas, diferenciando cerradas de las abiertas. Las tipo 3 se encuentra en los CHs y las cerradas corresponden al streamer. A su vez separamso en large and small, dependiendo de si su apice se encuentra dentro o fuera de la grilla tomografica. y finalmente separamos en up o down dependiendo si la temperatura aumenta o disminuye con la altura. 
-
-
-10-Here I'm showing you the location of each selected leg, divided in color segun el tipo de linea. En estos graficos cada punto representa una linea magnetica. Podemos ver que las lineas cerradas down tienden a ubicarse en las latitudes mas ecuatoriales, las latitudes medias se encuentran dominadas por lineas tipo 2 y en los polos solo tenemos lineas abiertas. Muestro tambien el mismo grafico para awsom. 
-
+We can see that type 0 populate mostly the equator.
 
 11-
-To provide a summary of the 3D results for both rotations, Figure 5 shows the average fits to N e (r) and T e (r)
+This figures shows the average fits to Ne and Te. and reveal in 3D detail the density and temperature structure. When moving from the core region of the streamer to the outer layers, the electron density at the coronal base decreases (and the scale height increases).
+The electron temperature increases when moving from the streamer core to its outer layers, and then decreases when moving out to the open regions. These trends are observed for both DEMT and AWSoM.
 
-Estos perfiles radiales fueron calculados con los valores promedios obtenidos de los ajustes. y junto con os histogramas que se muestran en el paper indican que en los streamers la densidad decrece desde tipo 0 a tipo 2, mientras que la escala de altura y la temperatura media (el alor de la mitad de esta recta) aumenta. Y cuando pasamos a los CHs todos los valores disminuyen.
+12- Error bars of the DEMT products due to their dominating sources (radiometric calibration and tomographic regularization)
 
-For both rotations, the electron density results of the AWSoM model are highly consistent with tomographic reconstructions, both in terms of absolute value and scale height. Also for both rotations, the electron temperature of the AWSoM model is very consistent with the tomographic results, both in terms of absolute value and radial gradient, with the model systematically exhibiting temperature values ≈15% smaller than the tomographic results.
+13- Figure shows latitude-longitude maps of the electron density Ne of both the C2-SRT analysis and the AWSoM model. Maps are shown at a sample heliocentric height r = 2.5 R ⊙ , the lowest height of the LASCO-C2 radial FoV.
 
-
-IMP: Cuanto es la diferencia en Ne y lambda y Tm entre awsom y tom?????
-
-
-
-For the different types of field lines, Figures show the statistical distribution of results. Tomographic results are shown in solid line style and the AWSoM model results in dashed line style. The left and middle panels show the electron density at the coronal base and the density scale height. In a similar fashion, the right panels show the field line averaged electron temperature ⟨Te⟩. These plots reveal in 3D detail the density and temperature structure of both the DEMT reconstructions and the AWSoM model, being both highly consistent in all regions. From top to bottom, the left and middle panels of show how the electron density at the coronal base decreases (and the scale height increases) when moving from the core region of the streamer (type 0 and I field lines) to its outer layers (type II field lines). Also, the coronal base density and scale height decrease when moving from the streamer out to the open region (type III field lines). Similarly, the right panels show how that the electron temperature increases when moving from the streamer core to its outer layers, and then decreases when moving out to the open regions. These trends are observed for both DEMT and AWSoM.
-
-DEMT analysis shows that progressively outer layers of the equatorial streamer belt exhibit decreasing coronal base density, increasing density scale height, and increasing electron temperature.
-
-
-12-Table2
-
-Table 2 summarizes a quantitative comparative analysis between the results of the AWSoM model and the DEMT reconstructions. Error bars of the DEMT products due to their dominating sources of uncertainty (radiometric calibration and tomographic regularization) were determined by Nuevo et al. (2015) and Lloveras et al. (2017). Statistically, the electron density at the coronal base of the AWSoM model matches the reconstructed values within ≈1 − 13% accuracy (depending on the specific region and rotation), a difference comparable to the DEMT uncertainty level ΔNCB ≈ 10%. Similarly, the density scale height of the AWSoM model is systematically smaller than the tomographic result within ≈4 − 19% accuracy , differences well beyond the DEMT uncertainty level Δλ N ≈ 2%. Also, the temperature of the AWSoM model is systematically smaller than the tomographic result within ≈6 − 14% accuracy, a difference comparable or larger than the uncertainty in the DEMT temperature ΔTe ≈ 5%.
-
-
-
-
-
-13- Figure shows latitude-longitude maps of the electron density N e of both the C2-SRT analysis and the AWSoM model. Maps are shown at a sample heliocentric height r = 2.5 R ⊙ , the lowest height of the LASCO-C2 radial FoV.
-
-For both rotations, there is an overall good consistency between the AWSoM and the C2-SRT maps, both in terms of shape and size of the streamer belt and the CHs, as well as in terms of characteristic values and their dynamic range. The AWSoM model exhibits density values systematically somewhat larger than the tomographic results, as detailed below. The location and shape of the O/C boundaries of the AWSoM model reasonably match the transition of the C2-SRT N e from larger values in the streamer belt (red/yellow colors) to smaller CHs values (green/blue colors).
-
-
-constitutes a good validation test
+Again we compared the real data with synthetic images
 
 shows a doubled peaked streamer
 
-
-the AWSoM model overestimates the electron density values in both hemispheres, as well as underestimates its scale height.
-
-Aqui les muestro mapas latitud longitud de Ne a la altura mas baja de la reconstruccion. Las lineas blancas representan la boundary between closed and open field lines
-
-There is a good overall onsistency in shape and size. Y nuevamente es un buen ejercicio comparar imagenes sinteticas con reales, donde podemos ver que en el caso de la tomografia hay incluso pequeñas features reproducidas y tambien la intensidad en la zona polar parece discrepar.
-
 14- 
+In the case of C2-SRT, the radial FoV covered by the instrument makes the hydrostatic regime less adequate to fit the electron density. That is why we used a simple PL that has an optimal goodness-of-fit to Ne results.
 
-In the case of C2-SRT, the radial FoV covered by the instrument (2.5–6.0 R ⊙ ) makes the hydrostatic regime less adequate to fit the electron density as a function of height. Previous works analyzing the large-scale coronal structure use a combination of two or more power-law (PL) terms ∝ r −p , with different exponent values p to describe the observed trends of N e (r) over a wide range of heights r. In some cases a term r −2 is included to describe mass conservation of a constant speed radial outflow at very large values of r, while terms with larger exponents describe the observed trends over smaller values of r. In this work, an optimal goodness-of-fit to the observed N e (r) over the C2 FoV was found by using a single PL
+15- We investigate the correlation between the terminal wind speed of the AWSoM model and the electron density and temperature of the low corona given by DEMT. To that end, we traced open field lines from the coronal base up to 20Rsun, where the model essentially reached its terminal properties.
 
-
-
-
-Estudiamos la densidad electronica a lo largo de las lineas magnéticas, y esta vez ajustamos con una potencia simple
-
-
-15-SW
-
-The correlation between the terminal wind speed of the AWSoM model and the electron density and temperature of the low corona as derived from DEMT was investigated. Open field lines were traced from the coronal base up to a maximum height 20 R⊙, where the model essentially reached its terminal properties
-
-latitude-longitude maps of the AWSoM model radial solar wind speed Vr (rM ) for all selected open field lines, where the white regions correspond to non-selected field lines
-
-For all field lines indicated in the top panels, middle panels show the scatter plots of the DEMT coronal base electron density N e (r = 1.05 R ⊙ ) versus the terminal radial wind speed V r (r M ) signed by B r (i.e., multiplied by Sgn(B r )) to separate results of the Northern and Southern hemispheres as positive and negative values, respectively. Similarly, the bottom panels show the scatter plots of the DEMT field line averaged electron temperature
-AA ⟨TT e ⟩ versus Sg(B r ) V r (r M ).
-
-The data points in the scatter plots are colored by the absolute value of the latitude of the field line at rM .
-
-These plots show that the model field lines threading the CHs exhibit a mean trend of anti-correlation between their terminal wind speed and both the DEMT electron density near the coronal base and the characteristic (field line averaged) DEMT electron temperature, for for both hemispheres of the two analyzed rotations. The vertical spread of the data points around the observed trends (both for the density and temperature plots) is in the range ≈25–45%, depending on the rotation and hemisphere. This is consistent with the characteristic LDEM temperature spread WT within each voxel, which as discussed in relation to Figure 2 is ≈45% in CHs. Note also that slower terminal speeds tend to be found along field lines that terminate at lower latitudes, near the heliospheric current sheet (HCS), whose shape and location is bounded by the white contours.
-
-
-the slow solar wind originates along open field lines closest to the streamer belt while the fast wind originates from the CHs
-
+The vertical spread of the data points around the observed trends is consistent with the characteristic LDEM temperature spread WT within each voxel. Note also that slower terminal speeds tend to be found along field lines that terminate at lower latitudes, near the heliospheric current sheet (HCS).
 
 16-Conclus
 
 
-
-
-
-
-
-
-%-----------------------------------------
-16- En esta slide estamos viendo un zoom en las cajas rojas que mostre en una de las primeras diapositivas. Vemos el conteo de manchas solares alrededor de los ultimos 3 minimos profundos, observados con las 3 generaciones de instrumentos EUV
-
-En particular vemos que el mínimo del 96, fue mas breve activo e intermitente. Si recuerdo bien esto lo mostró Pete en otro coloquio. SOlo quiero destacar que hubo practicamente 1 año con un casi nulo conteto de manchas en el caso del minimo del 2009.
-
-
-14- Correlacion entre velocidad teminal del viento con la densidad y temperatura tomografica en la region fuente del viento.
-
-
-cada punto es una linea
-
-Y esto esta en acuerdo con
-
-
-
-
-
-
-15- Conclus?
-
-The DEMT analysis reveals a 20% less dense and 20% hotter corona than for rotations corresponding to the solar cycle 23/24 deep minimum
-
-The electron density and temperature of the AWSoM model agree with DEMT results within 10% and 20%, respectively, while its electron density overestimates results of WL tomography up to 75%.
-
-The slow (fast) component of the terminal wind speed of the model is found to be associated with field lines characterized by larger (smaller) values of the tomographic density and temperature at the coronal base. DEMT reconstructions reveal the coronal plasma to be ubiquitously characterized by temperature variability of up to ≈45% over spatial scales of order ∼10 4 km. Taking into account this level of fine-structure by global models may be consequential for their predictions on wave propagation in the corona.
-
-
-
-
-
-
-ZDA:
-The SRT technique applied in this work, for both WL-SRT and DEMT, assumes a static coronal structure. As a result, tomographic reconstructions are affected by dynamics-induced artifacts known as “zero density artifacts”. ZDAs are non-reconstructed regions in the corona, and affect a relatively small coronal volume in solar minimum conditions
-
-
-
-
-
-
-
-ERRORES: Primer paper
-Involve the regularization level of the tomographic inversion
-Incertenty in the radiometric calibration related to the emisivity that each band detectes, the absolute as well as the relative. We estimated the rror in les than 5% in case of Te and less than 10% in case of Ne.
-
-
-
-
-Hagamos zoom en estos 3 cuadraditos rojos que representan los minimos profundos.
-
-
-
-+------------------
-En este grafico se muestra un conteo de manchas solares durante los ultimos 3 ciclos de actividad. Donde podemos ver que el nivel de actividad ha mostrado un sistemático descenso a lo largo del tiempo. Surge la incógnita de si la estructura termodinámica de la corona tiene alguna relación con el nivel de actividad del SC que lo precede. Esta fue la motivación inicial para la propuesta de tesis que finalmente llevo a realizar una caracterización observacional de la estructura termodinámica coronal durante los últimos tres mı́nimos de actividad solar.
-
-Voy a hablar principalmente del ultimo paper.
-
-Pero al final de la charla voy a mencionar los 3 estudios.
-
-
-------------------------------------
 
 
 
